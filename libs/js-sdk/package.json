@@ -1,0 +1,39 @@
+{
+  "name": "@getoptimal/js-sdk",
+  "version": "0.1.4",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "type": "module",
+  "publishConfig": {
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "lint": "eslint .",
+    "lint:fix": "pnpm lint --fix",
+    "type-check": "tsc --noEmit",
+    "build": "tsup-node index.ts"
+  },
+  "tsup": {
+    "format": [
+      "esm"
+    ],
+    "dts": true,
+    "splitting": true,
+    "sourcemap": true,
+    "clean": true
+  },
+  "dependencies": {
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@getoptimal/eslint-config": "^0.1.0",
+    "eslint": "^8.38.0",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4"
+  }
+}

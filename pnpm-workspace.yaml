@@ -1,0 +1,4 @@
+packages:
+  - apps/react-native-test-app
+  - packages/config/*
+  - libs/*
