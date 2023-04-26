@@ -30,7 +30,7 @@ pnpm i
 
 ```bash
    # build the project
-   pnpm exec turbo run build lint
+   pnpm exec turbo run build lint type-check
 
    # create a change set
    pnpm exec changeset

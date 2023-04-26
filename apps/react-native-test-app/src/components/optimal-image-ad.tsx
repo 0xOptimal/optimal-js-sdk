@@ -1,9 +1,8 @@
 import { Image, StyleSheet } from "react-native";
 
-import { OptimalAd } from "@getoptimal/react-native";
-import { type GetAdOpts } from "@getoptimal/react-native/sdk";
+import { OptimalAd, type sdk } from "@getoptimal/react-native";
 
-export const OptimalImageAd = (opts: GetAdOpts) => {
+export const OptimalImageAd = (opts: sdk.GetAdOpts) => {
   return (
     <OptimalAd
       opts={opts}

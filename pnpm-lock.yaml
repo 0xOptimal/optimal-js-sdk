@@ -33,8 +33,8 @@ importers:
       '@emotion/core': ^10.0.27
       '@expo/config-plugins': ^6.0.1
       '@expo/metro-config': ^0.7.1
-      '@getoptimal/eslint-config': '*'
-      '@getoptimal/react-native': '*'
+      '@getoptimal/eslint-config': workspace:*
+      '@getoptimal/react-native': workspace:*
       '@react-native-async-storage/async-storage': ^1.17.1
       '@react-native-community/datetimepicker': ^6.7.3
       '@react-native-community/slider': ^4.4.2
@@ -98,7 +98,7 @@ importers:
 
   libs/js-sdk:
     specifiers:
-      '@getoptimal/eslint-config': ^0.1.0
+      '@getoptimal/eslint-config': ^0.1.2
       eslint: ^8.38.0
       tsup: ^6.7.0
       typescript: ^5.0.4
@@ -113,8 +113,8 @@ importers:
 
   libs/react-native:
     specifiers:
-      '@getoptimal/eslint-config': ^0.1.0
-      '@getoptimal/js-sdk': '*'
+      '@getoptimal/eslint-config': ^0.1.2
+      '@getoptimal/js-sdk': workspace:*
       '@react-native-community/netinfo': ^9.3.9
       '@tanstack/react-query': ^4.29.5
       '@types/node': ^18.16.0
