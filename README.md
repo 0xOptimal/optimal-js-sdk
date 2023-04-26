@@ -38,13 +38,16 @@ pnpm i
    # bump the version
    pnpm exec changeset version
 
+   # build the project again so that version numbers are updated in the code
+   pnpm exec turbo run build
+
    # add changes to git
    git add . -A
 
    # commit the changes
    git commit -m "your commit message"
 
-   # publish the packagespnp
+   # publish the packages
    pnpm publish -r
 
 ```

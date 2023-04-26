@@ -1,12 +1,32 @@
 {
   "name": "@getoptimal/react-native",
   "version": "0.1.4",
-  "main": "./index.ts",
-  "types": "./index.ts",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./index.ts",
+      "require": "./index.ts",
+      "types": "./index.ts"
+    },
+    "./sdk": {
+      "import": "./sdk.ts",
+      "require": "./sdk.ts",
+      "types": "./sdk.ts"
+    }
+  },
   "publishConfig": {
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts"
+    "exports": {
+      ".": {
+        "import": "./dist/index.js",
+        "require": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./sdk": {
+        "import": "./dist/sdk.js",
+        "require": "./dist/sdk.js",
+        "types": "./dist/sdk.d.ts"
+      }
+    }
   },
   "files": [
     "dist"
@@ -16,7 +36,7 @@
     "lint": "eslint .",
     "lint:fix": "pnpm lint --fix",
     "type-check": "tsc --noEmit",
-    "build": "tsup-node index.ts"
+    "build": "tsup-node index.ts sdk.ts"
   },
   "tsup": {
     "format": [
@@ -28,10 +48,12 @@
     "clean": true
   },
   "peerDependencies": {
-    "react-native": "0.71.7"
+    "react-native": ">=0.71.6"
   },
   "dependencies": {
-    "@getoptimal/js-sdk": "*"
+    "@getoptimal/js-sdk": "*",
+    "@react-native-community/netinfo": "^9.3.9",
+    "@tanstack/react-query": "^4.29.5"
   },
   "devDependencies": {
     "@getoptimal/eslint-config": "^0.1.0",

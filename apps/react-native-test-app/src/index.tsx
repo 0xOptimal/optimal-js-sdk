@@ -1,6 +1,5 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
-import { OptimalAd } from "@getoptimal/react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 const style = StyleSheet.create({
   container: {
@@ -15,7 +14,7 @@ const style = StyleSheet.create({
 export const Index = () => {
   return (
     <View style={style.container}>
-      <OptimalAd />
+      <Text>Use storybook to test optimal ads</Text>
     </View>
   );
 };

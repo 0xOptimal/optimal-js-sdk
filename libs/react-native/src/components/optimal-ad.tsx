@@ -1,31 +1,46 @@
-import { useEffect, useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { client } from "@getoptimal/js-sdk";
+import { useMemo, type ReactNode } from "react";
+import { Text, View, type ViewProps } from "react-native";
 
-const styles = StyleSheet.create({
-  container: {
-    borderWidth: 2,
-    borderColor: "#9944ED",
-    borderStyle: "solid",
-    width: "100%",
-    paddingHorizontal: 20,
-    paddingVertical: 40,
-  },
-});
+import { type GetAdOpts } from "@getoptimal/js-sdk";
+import { type Decision } from "@getoptimal/js-sdk/src/types/decision";
 
-export const OptimalAd = () => {
-  const [adText, setAdText] = useState("");
+import { useOptimalAd } from "../hooks";
 
-  useEffect(() => {
-    client
-      .getAd({ text: "Optimal Ad" })
-      .then((value) => setAdText(value))
-      .catch(() => setAdText("error"));
-  }, []);
+export const OptimalAd = ({
+  opts,
+  containerStyle,
+  renderAd,
+  renderLoading,
+}: {
+  opts: GetAdOpts;
+  containerStyle?: ViewProps["style"];
+  renderAd: (decision: Decision) => ReactNode;
+  renderLoading?: () => ReactNode;
+}) => {
+  const { data: decision, error, isLoading } = useOptimalAd(opts);
 
-  return (
-    <View style={styles.container}>
-      <Text>{adText || "Loading..."}</Text>
-    </View>
-  );
+  const ad = useMemo(() => {
+    if (!decision) {
+      return <></>;
+    }
+    return renderAd(decision);
+  }, [decision, renderAd]);
+
+  const loading = useMemo(() => {
+    if (renderLoading) {
+      return renderLoading();
+    }
+    return <Text>Loading...</Text>;
+  }, [renderLoading]);
+
+  if (isLoading) {
+    return <>{loading}</>;
+  }
+
+  if (error || !decision) {
+    return <></>;
+  }
+
+  // TODO: implement viewport tracking here
+  return <View style={containerStyle}>{ad}</View>;
 };
