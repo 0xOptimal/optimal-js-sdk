@@ -1,6 +1,6 @@
 {
   "name": "@getoptimal/react-native",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "type": "module",
   "exports": {
     ".": {
@@ -51,12 +51,12 @@
     "react-native": ">=0.71.6"
   },
   "dependencies": {
-    "@getoptimal/js-sdk": "*",
+    "@getoptimal/js-sdk": "workspace:*",
     "@react-native-community/netinfo": "^9.3.9",
     "@tanstack/react-query": "^4.29.5"
   },
   "devDependencies": {
-    "@getoptimal/eslint-config": "^0.1.1",
+    "@getoptimal/eslint-config": "^0.1.2",
     "@types/node": "^18.16.0",
     "@types/react": "^18.0.37",
     "eslint": "^8.38.0",

@@ -1,8 +1,7 @@
 import { useMemo, type ReactNode } from "react";
 import { Text, View, type ViewProps } from "react-native";
 
-import { type GetAdOpts } from "@getoptimal/js-sdk";
-import { type Decision } from "@getoptimal/js-sdk/src/types/decision";
+import { type Decision, type GetAdOpts } from "@getoptimal/js-sdk";
 
 import { useOptimalAd } from "../hooks";
 
