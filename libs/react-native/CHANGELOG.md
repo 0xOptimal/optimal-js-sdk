@@ -1,5 +1,13 @@
 # @getoptimal/react-native
 
+## 0.1.5
+
+### Patch Changes
+
+- implement ad fetching
+- Updated dependencies
+  - @getoptimal/js-sdk@0.1.5
+
 ## 0.1.4
 
 ### Patch Changes

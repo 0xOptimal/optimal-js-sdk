@@ -1,5 +1,11 @@
 # @getoptimal/js-sdk
 
+## 0.1.5
+
+### Patch Changes
+
+- implement ad fetching
+
 ## 0.1.4
 
 ### Patch Changes
