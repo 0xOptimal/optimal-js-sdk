@@ -1,5 +1,7 @@
 import { View } from "react-native";
 
+import { OptimalProvider } from "@getoptimal/react-native";
+
 export const parameters = {
   controls: {
     matchers: {
@@ -17,7 +19,9 @@ export const decorators = [
         padding: 20,
       }}
     >
-      <Story />
+      <OptimalProvider>
+        <Story />
+      </OptimalProvider>
     </View>
   ),
 ];
