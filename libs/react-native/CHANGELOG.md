@@ -1,5 +1,13 @@
 # @getoptimal/react-native
 
+## 0.1.8
+
+### Patch Changes
+
+- initial implementation of viewport tracker
+- Updated dependencies
+  - @getoptimal/js-sdk@0.1.8
+
 ## 0.1.7
 
 ### Patch Changes

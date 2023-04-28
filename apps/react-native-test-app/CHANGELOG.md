@@ -1,6 +1,12 @@
 # @getoptimal/react-native-test-app
 
-## 0.1.3
+## 0.1.8
+
+### Patch Changes
+
+- initial implementation of viewport tracker
+
+## 0.1.7
 
 ### Patch Changes
 

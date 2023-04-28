@@ -1,7 +1,7 @@
 {
   "name": "@getoptimal/eslint-config",
   "private": true,
-  "version": "0.1.3",
+  "version": "0.1.8",
   "main": "index.js",
   "dependencies": {
     "@types/eslint": "^8.37.0",

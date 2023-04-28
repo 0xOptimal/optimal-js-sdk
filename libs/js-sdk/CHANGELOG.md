@@ -1,5 +1,11 @@
 # @getoptimal/js-sdk
 
+## 0.1.8
+
+### Patch Changes
+
+- initial implementation of viewport tracker
+
 ## 0.1.7
 
 ### Patch Changes
