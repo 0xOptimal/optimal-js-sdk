@@ -1,9 +1,10 @@
-import { useMemo, type ReactNode } from "react";
-import { Text, View, type ViewProps } from "react-native";
+import { useCallback, useMemo, type ReactNode } from "react";
+import { Text, type ViewProps } from "react-native";
 
 import { type Decision, type GetAdOpts } from "@getoptimal/js-sdk";
 
 import { useOptimalAd } from "../hooks";
+import VisibilitySensor from "./visibility-sensor";
 
 export const OptimalAd = ({
   opts,
@@ -32,6 +33,14 @@ export const OptimalAd = ({
     return <Text>Loading...</Text>;
   }, [renderLoading]);
 
+  const handleVisible = useCallback(() => {
+    console.log("visible");
+  }, []);
+
+  const handleHidden = useCallback((visibleDuration: number | null) => {
+    console.log({ visibleDuration });
+  }, []);
+
   if (isLoading) {
     return <>{loading}</>;
   }
@@ -40,6 +49,13 @@ export const OptimalAd = ({
     return <></>;
   }
 
-  // TODO: implement viewport tracking here
-  return <View style={containerStyle}>{ad}</View>;
+  return (
+    <VisibilitySensor
+      style={containerStyle}
+      onVisible={handleVisible}
+      onHidden={handleHidden}
+    >
+      {ad}
+    </VisibilitySensor>
+  );
 };
