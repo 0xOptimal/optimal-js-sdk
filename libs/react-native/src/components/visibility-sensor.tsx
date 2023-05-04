@@ -17,8 +17,8 @@ export interface DimensionData {
 
 export interface Props {
   onChange?(visible: boolean): void;
-  onVisible?(becameVisibleAt: number): void;
-  onHidden?(visibleDuration: number | null): void;
+  onVisible?(becameVisibleAt: number): void | Promise<void>;
+  onHidden?(visibleDurationInMillis: number | null): void | Promise<void>;
   children: ReactNode;
   style?: ViewProps["style"];
 }
@@ -42,7 +42,7 @@ export const VisibilitySensor: FC<Props> = ({
 
   const handleVisible = useCallback(() => {
     becameVisibleAt.current = Date.now();
-    onVisible?.(becameVisibleAt.current);
+    Promise.resolve(onVisible?.(becameVisibleAt.current)).catch(() => null);
   }, [onVisible]);
 
   const handleHidden = useCallback(() => {
@@ -50,7 +50,7 @@ export const VisibilitySensor: FC<Props> = ({
     const visibleDuration = becameVisibleAt.current
       ? now - becameVisibleAt.current
       : null;
-    onHidden?.(visibleDuration);
+    Promise.resolve(onHidden?.(visibleDuration)).catch(() => null);
     becameVisibleAt.current = null;
   }, [onHidden]);
 

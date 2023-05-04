@@ -9,9 +9,10 @@ const defineConfig = (config) => {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   return require("@expo/config-plugins").withProjectBuildGradle(
     config,
-    (conf) => {
-      if (!conf.modResults.contents.includes("ext.getPackageJsonVersion =")) {
-        conf.modResults.contents = conf.modResults.contents.replace(
+    // eslint-disable-next-line no-shadow
+    (config) => {
+      if (!config.modResults.contents.includes("ext.getPackageJsonVersion =")) {
+        config.modResults.contents = config.modResults.contents.replace(
           "buildscript {",
           `buildscript {
     ext.getPackageJsonVersion = { packageName ->
@@ -20,23 +21,23 @@ const defineConfig = (config) => {
         );
       }
 
-      if (!conf.modResults.contents.includes("reactNativeVersion =")) {
-        conf.modResults.contents = conf.modResults.contents.replace(
+      if (!config.modResults.contents.includes("reactNativeVersion =")) {
+        config.modResults.contents = config.modResults.contents.replace(
           "ext {",
           `ext {
         reactNativeVersion = "\${ext.getPackageJsonVersion('react-native')}"`,
         );
       }
 
-      if (!conf.modResults.contents.includes("expoPackageVersion =")) {
-        conf.modResults.contents = conf.modResults.contents.replace(
+      if (!config.modResults.contents.includes("expoPackageVersion =")) {
+        config.modResults.contents = config.modResults.contents.replace(
           "ext {",
           `ext {
         expoPackageVersion = "\${ext.getPackageJsonVersion('expo')}"`,
         );
       }
 
-      return conf;
+      return config;
     },
   );
 };
