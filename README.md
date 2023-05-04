@@ -47,6 +47,9 @@ pnpm i
    # commit the changes
    git commit -m "your commit message"
 
+   # push the changes
+   git push
+
    # publish the packages
    pnpm publish -r
 
