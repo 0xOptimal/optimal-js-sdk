@@ -1,5 +1,11 @@
 # @getoptimal/js-sdk
 
+## 0.2.0
+
+### Minor Changes
+
+- initial stable release
+
 ## 0.1.8
 
 ### Patch Changes
