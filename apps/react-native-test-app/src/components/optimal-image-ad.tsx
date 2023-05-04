@@ -7,15 +7,13 @@ export const OptimalImageAd = (opts: sdk.GetAdOpts) => {
     <OptimalAd
       opts={opts}
       containerStyle={styles.adContainer}
-      renderAd={(decision) => {
-        return (
-          <Image
-            source={{ uri: decision.image }}
-            resizeMode="contain"
-            style={styles.image}
-          />
-        );
-      }}
+      renderAd={(decision) => (
+        <Image
+          source={{ uri: decision.image }}
+          resizeMode="contain"
+          style={styles.image}
+        />
+      )}
     />
   );
 };

@@ -1,8 +1,58 @@
-# Optimal SDK Monorepo
+# Optimal JS SDK
 
 ## Quick Start
 
-To get it running, follow the steps below:
+### Installation
+
+Install the package with your package manager of choice.
+
+```bash
+# npm
+npm install @optimal-js/sdk
+
+# yarn
+yarn add @optimal-js/sdk
+
+# pnpm
+pnpm add @optimal-js/sdk
+```
+
+### Usage
+
+See the following example for a quick start. `GetAdOpts` can be obtained from the Optimal team.
+
+```tsx
+import { Image, StyleSheet } from "react-native";
+
+import { OptimalAd, type sdk } from "@getoptimal/react-native";
+
+export const OptimalImageAd = (opts: sdk.GetAdOpts) => {
+  return (
+    <OptimalAd
+      opts={opts}
+      containerStyle={styles.adContainer}
+      renderAd={(decision) => (
+        <Image
+          source={{ uri: decision.image }}
+          resizeMode="contain"
+          style={styles.image}
+        />
+      )}
+    />
+  );
+};
+
+const styles = StyleSheet.create({
+  adContainer: {
+    width: "100%",
+    aspectRatio: 22 / 9,
+  },
+  image: {
+    width: "100%",
+    height: "100%",
+  },
+});
+```
 
 ### Setup dependencies
 
@@ -11,9 +61,9 @@ To get it running, follow the steps below:
 pnpm i
 ```
 
-### Configure Expo `dev`-script
+## Development
 
-#### Use iOS Simulator
+### Use iOS Simulator
 
 1. Make sure you have XCode and XCommand Line Tools installed [as shown on expo docs](https://docs.expo.dev/workflow/ios-simulator/).
 
@@ -21,7 +71,7 @@ pnpm i
 
 2. Run `pnpm dev` at the project root folder.
 
-#### For Android
+### For Android
 
 1. Install Android Studio tools [as shown on expo docs](https://docs.expo.dev/workflow/android-studio-emulator/).
 2. Run `pnpm dev` at the project root folder.
