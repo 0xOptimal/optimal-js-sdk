@@ -55,14 +55,14 @@ export const VisibilitySensor: FC<Props> = ({
   }, [onHidden]);
 
   const isInViewPort = useCallback(
-    (dimensions: DimensionData) => {
+    (dims: DimensionData) => {
       const window = Dimensions.get("window");
       const isVisible =
-        dimensions.rectBottom != 0 &&
-        dimensions.rectTop >= 0 &&
-        dimensions.rectBottom <= window.height &&
-        dimensions.rectWidth > 0 &&
-        dimensions.rectWidth <= window.width;
+        dims.rectBottom !== 0 &&
+        dims.rectTop >= 0 &&
+        dims.rectBottom <= window.height &&
+        dims.rectWidth > 0 &&
+        dims.rectWidth <= window.width;
 
       if (lastValue.current !== isVisible) {
         lastValue.current = isVisible;
@@ -78,9 +78,14 @@ export const VisibilitySensor: FC<Props> = ({
     [onChange, handleVisible, handleHidden],
   );
 
+  const hiddenRef = useRef(handleHidden);
+  useEffect(() => {
+    hiddenRef.current = handleHidden;
+  }, [handleHidden]);
+
   useEffect(() => {
     return () => {
-      handleHidden();
+      hiddenRef.current();
     };
   }, []);
 
@@ -119,7 +124,12 @@ export const VisibilitySensor: FC<Props> = ({
       rectTop: dimensions.rectTop,
       rectWidth: dimensions.rectWidth,
     });
-  }, [dimensions.rectTop, dimensions.rectBottom, dimensions.rectWidth]);
+  }, [
+    dimensions.rectTop,
+    dimensions.rectBottom,
+    dimensions.rectWidth,
+    isInViewPort,
+  ]);
 
   return (
     <View style={style} collapsable={false} ref={myView}>

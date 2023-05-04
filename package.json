@@ -11,11 +11,12 @@
     "clean:workspaces": "turbo clean",
     "dev": "turbo dev --parallel",
     "format": "prettier --write \"**/*.{js,cjs,mjs,ts,tsx,md,json}\" --ignore-path .gitignore",
-    "lint": "turbo lint && manypkg check",
-    "lint:fix": "turbo lint:fix && manypkg fix",
+    "lint": "turbo lint",
+    "lint:fix": "turbo lint:fix",
     "type-check": "turbo type-check"
   },
   "dependencies": {
+    "@changesets/cli": "^2.26.1",
     "@ianvs/prettier-plugin-sort-imports": "^3.7.2",
     "@manypkg/cli": "^0.20.0",
     "@getoptimal/eslint-config": "^0.1.0",
@@ -24,8 +25,5 @@
     "prettier": "^2.8.7",
     "turbo": "^1.9.3",
     "typescript": "^5.0.4"
-  },
-  "devDependencies": {
-    "@changesets/cli": "^2.26.1"
   }
 }

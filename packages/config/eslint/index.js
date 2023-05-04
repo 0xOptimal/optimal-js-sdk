@@ -1,12 +1,14 @@
 /** @type {import("eslint").Linter.Config} */
 const config = {
   extends: [
+    "@react-native-community",
     "turbo",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "prettier",
   ],
   rules: {
+    "react/react-in-jsx-scope": "off",
     "@typescript-eslint/restrict-template-expressions": "off",
     "@typescript-eslint/no-unused-vars": [
       "error",
