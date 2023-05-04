@@ -34,8 +34,8 @@ importers:
       '@expo/metro-config': ^0.7.1
       '@getoptimal/eslint-config': workspace:*
       '@getoptimal/react-native': workspace:*
-      '@react-native-async-storage/async-storage': ^1.17.1
-      '@react-native-community/datetimepicker': ^6.7.3
+      '@react-native-async-storage/async-storage': 1.17.11
+      '@react-native-community/datetimepicker': 6.7.3
       '@react-native-community/slider': ^4.4.2
       '@storybook/addon-actions': ^6.5.14
       '@storybook/addon-controls': ^6.5.14
@@ -52,20 +52,20 @@ importers:
       expo-constants: ~14.2.1
       expo-linking: ~4.0.1
       expo-modules-autolinking: ^1.2.0
-      expo-splash-screen: ~0.18.1
+      expo-splash-screen: ~0.18.2
       postcss: ^8.4.22
       react: 18.2.0
       react-dom: 18.2.0
       react-native: 0.71.7
-      react-native-safe-area-context: ^4.5.0
-      typescript: ^5.0.4
+      react-native-safe-area-context: 4.5.0
+      typescript: ^4.9.4
     dependencies:
       '@expo/metro-config': 0.7.1
       expo: 48.0.11_@babel+core@7.21.4
       expo-constants: 14.2.1_expo@48.0.11
       expo-linking: 4.0.1_expo@48.0.11
       expo-modules-autolinking: 1.2.0
-      expo-splash-screen: 0.18.1_iahjlspuiswgkr2cudfjxc7ubq
+      expo-splash-screen: 0.18.2_iahjlspuiswgkr2cudfjxc7ubq
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-native: 0.71.7_5uxi4zdir3aqroafmx7pnq5rdy
@@ -77,14 +77,14 @@ importers:
       '@expo/config-plugins': 6.0.1
       '@getoptimal/eslint-config': link:../../packages/config/eslint
       '@getoptimal/react-native': link:../../libs/react-native
-      '@react-native-async-storage/async-storage': 1.18.1_react-native@0.71.7
-      '@react-native-community/datetimepicker': 6.7.5
+      '@react-native-async-storage/async-storage': 1.17.11_react-native@0.71.7
+      '@react-native-community/datetimepicker': 6.7.3
       '@react-native-community/slider': 4.4.2
       '@storybook/addon-actions': 6.5.16_biqbaboplfbrettd7655fr4n2y
-      '@storybook/addon-controls': 6.5.16_au7lparhqeu62bggztyi7ia2ja
+      '@storybook/addon-controls': 6.5.16_6qnyfybbytm5lxsc5wvgwigufi
       '@storybook/addon-ondevice-actions': 6.5.3_7u5uczn53ykvdzwlcppp52fzga
-      '@storybook/addon-ondevice-controls': 6.5.3_cqtytck7mrsaouaepa5jtk6xqq
-      '@storybook/react-native': 6.5.3_g5oy6ayocy5i3i5elxzt7u6sxy
+      '@storybook/addon-ondevice-controls': 6.5.3_ogcyu4jy27t7wkbb6pjcuyuhai
+      '@storybook/react-native': 6.5.3_bd6g7ypa2ez5inozf77qvpovhm
       '@types/babel__core': 7.20.0
       '@types/node': 18.16.0
       '@types/react': 18.0.38
@@ -92,8 +92,8 @@ importers:
       babel-plugin-module-resolver: 5.0.0
       eslint: 8.39.0
       postcss: 8.4.23
-      react-native-safe-area-context: 4.5.1_sen2ivbtrxhzzk6vdoh233h3yi
-      typescript: 5.0.4
+      react-native-safe-area-context: 4.5.0_sen2ivbtrxhzzk6vdoh233h3yi
+      typescript: 4.9.5
 
   libs/js-sdk:
     specifiers:
@@ -2750,6 +2750,27 @@ packages:
       - supports-color
     dev: false
 
+  /@expo/prebuild-config/6.0.1_2km7asu7gnh4yobgzmxuseeaye:
+    resolution: {integrity: sha512-WK3FDht1tdXZGCvtG5s7HSwzhsc7Tyu2DdqV9jVUsLtGD42oqUepk13mEWlU9LOTBgLsoEueKjoSK4EXOXFctw==}
+    peerDependencies:
+      expo-modules-autolinking: '>=0.8.1'
+    dependencies:
+      '@expo/config': 8.0.2
+      '@expo/config-plugins': 6.0.1
+      '@expo/config-types': 48.0.0
+      '@expo/image-utils': 0.3.22
+      '@expo/json-file': 8.2.37
+      debug: 4.3.4
+      expo-modules-autolinking: 1.2.0
+      fs-extra: 9.1.0
+      resolve-from: 5.0.0
+      semver: 7.3.2
+      xml2js: 0.4.23
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+    dev: false
+
   /@expo/rudder-sdk-node/1.1.1:
     resolution: {integrity: sha512-uy/hS/awclDJ1S88w9UGpc6Nm9XnNUjzOAAib1A3PVAnGQIwebg8DpFqOthFBTlZxeuV/BKbZ5jmTbtNZkp1WQ==}
     engines: {node: '>=12'}
@@ -3053,10 +3074,10 @@ packages:
       rimraf: 3.0.2
     dev: false
 
-  /@react-native-async-storage/async-storage/1.18.1_react-native@0.71.7:
-    resolution: {integrity: sha512-70aFW8fVCKl+oA1AKPFDpE6s4t9pulj2QeLX+MabEmzfT3urd/3cckv45WJvtocdoIH/oXA3Y+YcCRJCcNa8mA==}
+  /@react-native-async-storage/async-storage/1.17.11_react-native@0.71.7:
+    resolution: {integrity: sha512-bzs45n5HNcDq6mxXnSsOHysZWn1SbbebNxldBXCQs8dSvF8Aor9KCdpm+TpnnGweK3R6diqsT8lFhX77VX0NFw==}
     peerDependencies:
-      react-native: ^0.0.0-0 || 0.60 - 0.72 || 1000.0.0
+      react-native: ^0.0.0-0 || 0.60 - 0.71 || 1000.0.0
     dependencies:
       merge-options: 3.0.4
       react-native: 0.71.7_5uxi4zdir3aqroafmx7pnq5rdy
@@ -3285,8 +3306,8 @@ packages:
       - supports-color
       - utf-8-validate
 
-  /@react-native-community/datetimepicker/6.7.5:
-    resolution: {integrity: sha512-E2Zh6mwvZ6CFEMKP++rdxxjJiB45fYPpdZhJwdZ2vUVwqovqu1cQRDLZmz4XrcHSyuacgR4WUnkYFf0F2nnNIg==}
+  /@react-native-community/datetimepicker/6.7.3:
+    resolution: {integrity: sha512-fXWbEdHMLW/e8cts3snEsbOTbnFXfUHeO2pkiDFX3fWpFoDtUrRWvn50xbY13IJUUKHDhoJ+mj24nMRVIXfX1A==}
     dependencies:
       invariant: 2.2.4
     dev: true
@@ -3412,7 +3433,7 @@ packages:
       uuid-browser: 3.1.0
     dev: true
 
-  /@storybook/addon-controls/6.5.16_au7lparhqeu62bggztyi7ia2ja:
+  /@storybook/addon-controls/6.5.16_6qnyfybbytm5lxsc5wvgwigufi:
     resolution: {integrity: sha512-kShSGjq1MjmmyL3l8i+uPz6yddtf82mzys0l82VKtcuyjrr5944wYFJ5NTXMfZxrO/U6FeFsfuFZE/k6ex3EMg==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -3427,7 +3448,7 @@ packages:
       '@storybook/api': 6.5.16_biqbaboplfbrettd7655fr4n2y
       '@storybook/client-logger': 6.5.16
       '@storybook/components': 6.5.16_biqbaboplfbrettd7655fr4n2y
-      '@storybook/core-common': 6.5.16_au7lparhqeu62bggztyi7ia2ja
+      '@storybook/core-common': 6.5.16_6qnyfybbytm5lxsc5wvgwigufi
       '@storybook/csf': 0.0.2--canary.4566f4d.1
       '@storybook/node-logger': 6.5.16
       '@storybook/store': 6.5.16_biqbaboplfbrettd7655fr4n2y
@@ -3463,7 +3484,7 @@ packages:
       - react-dom
     dev: true
 
-  /@storybook/addon-ondevice-controls/6.5.3_cqtytck7mrsaouaepa5jtk6xqq:
+  /@storybook/addon-ondevice-controls/6.5.3_ogcyu4jy27t7wkbb6pjcuyuhai:
     resolution: {integrity: sha512-MRv2kVUfY0he47wrkJa9GCAK3eWblco6YOk9b5UsfjJiZkHjt0WjEQ4NhmTKfnHRAgK+tvJJ/s8jKXTxqkwbfw==}
     peerDependencies:
       '@react-native-community/datetimepicker': '*'
@@ -3473,9 +3494,9 @@ packages:
       react-native: '*'
     dependencies:
       '@emotion/native': 10.0.27_flslt2gnwrxda2ywrxk6mn25na
-      '@react-native-community/datetimepicker': 6.7.5
+      '@react-native-community/datetimepicker': 6.7.3
       '@react-native-community/slider': 4.4.2
-      '@storybook/addon-controls': 6.5.16_au7lparhqeu62bggztyi7ia2ja
+      '@storybook/addon-controls': 6.5.16_6qnyfybbytm5lxsc5wvgwigufi
       '@storybook/addons': 6.5.16_biqbaboplfbrettd7655fr4n2y
       '@storybook/client-logger': 6.5.16
       '@storybook/core-events': 6.5.16
@@ -3484,7 +3505,7 @@ packages:
       prop-types: 15.8.1
       react: 18.2.0
       react-native: 0.71.7_5uxi4zdir3aqroafmx7pnq5rdy
-      react-native-modal-datetime-picker: 14.0.1_aey6yp2ntqcs75ld4j26kvyzim
+      react-native-modal-datetime-picker: 14.0.1_m7qh5j75b6qemaaty35w56nrf4
       react-native-modal-selector: 2.1.2
       tinycolor2: 1.6.0
     transitivePeerDependencies:
@@ -3625,7 +3646,7 @@ packages:
       util-deprecate: 1.0.2
     dev: true
 
-  /@storybook/core-client/6.5.16_tvrvbu6r5w7oyqiu4bvze3slou:
+  /@storybook/core-client/6.5.16_ygqkwb4gg3aean7xjfdauovyqq:
     resolution: {integrity: sha512-14IRaDrVtKrQ+gNWC0wPwkCNfkZOKghYV/swCUnQX3rP99defsZK8Hc7xHIYoAiOP5+sc3sweRAxgmFiJeQ1Ig==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -3656,12 +3677,12 @@ packages:
       react-dom: 18.2.0_react@18.2.0
       regenerator-runtime: 0.13.11
       ts-dedent: 2.2.0
-      typescript: 5.0.4
+      typescript: 4.9.5
       unfetch: 4.2.0
       util-deprecate: 1.0.2
     dev: true
 
-  /@storybook/core-common/6.5.16_au7lparhqeu62bggztyi7ia2ja:
+  /@storybook/core-common/6.5.16_6qnyfybbytm5lxsc5wvgwigufi:
     resolution: {integrity: sha512-2qtnKP3TTOzt2cp6LXKRTh7XrI9z5VanMnMTgeoFcA5ebnndD4V6BExQUdYPClE/QooLx6blUWNgS9dFEpjSqQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -3705,7 +3726,7 @@ packages:
       express: 4.18.2
       file-system-cache: 1.1.0
       find-up: 5.0.0
-      fork-ts-checker-webpack-plugin: 6.5.3_snu7mwe3hywiqdnrbwxpp5zzri
+      fork-ts-checker-webpack-plugin: 6.5.3_mlzltlvmj5prjy7ebp5dffhqpm
       fs-extra: 9.1.0
       glob: 7.2.3
       handlebars: 4.7.7
@@ -3721,7 +3742,7 @@ packages:
       slash: 3.0.0
       telejson: 6.0.8
       ts-dedent: 2.2.0
-      typescript: 5.0.4
+      typescript: 4.9.5
       util-deprecate: 1.0.2
       webpack: 4.46.0
     transitivePeerDependencies:
@@ -3780,7 +3801,7 @@ packages:
       util-deprecate: 1.0.2
     dev: true
 
-  /@storybook/react-native/6.5.3_g5oy6ayocy5i3i5elxzt7u6sxy:
+  /@storybook/react-native/6.5.3_bd6g7ypa2ez5inozf77qvpovhm:
     resolution: {integrity: sha512-Ka9tu5DORXwmoQK8Wz1aA0FARNI44BINmM/8CBjHdDF9lmU5M2bqn08h5AZgGHQus7a4wDhrJyenbOh2prrMxA==}
     engines: {node: '>=8.0.0'}
     hasBin: true
@@ -3792,13 +3813,13 @@ packages:
     dependencies:
       '@emotion/core': 10.3.1_react@18.2.0
       '@emotion/native': 10.0.27_flslt2gnwrxda2ywrxk6mn25na
-      '@react-native-async-storage/async-storage': 1.18.1_react-native@0.71.7
+      '@react-native-async-storage/async-storage': 1.17.11_react-native@0.71.7
       '@storybook/addons': 6.5.16_biqbaboplfbrettd7655fr4n2y
       '@storybook/channel-websocket': 6.5.16
       '@storybook/channels': 6.5.16
       '@storybook/client-api': 6.5.16_biqbaboplfbrettd7655fr4n2y
       '@storybook/client-logger': 6.5.16
-      '@storybook/core-client': 6.5.16_tvrvbu6r5w7oyqiu4bvze3slou
+      '@storybook/core-client': 6.5.16_ygqkwb4gg3aean7xjfdauovyqq
       '@storybook/core-events': 6.5.16
       '@storybook/csf': 0.0.2--canary.4566f4d.1
       '@storybook/preview-web': 6.5.16_biqbaboplfbrettd7655fr4n2y
@@ -3811,7 +3832,7 @@ packages:
       prettier: 2.8.8
       react: 18.2.0
       react-native: 0.71.7_5uxi4zdir3aqroafmx7pnq5rdy
-      react-native-safe-area-context: 4.5.1_sen2ivbtrxhzzk6vdoh233h3yi
+      react-native-safe-area-context: 4.5.0_sen2ivbtrxhzzk6vdoh233h3yi
       react-native-swipe-gestures: 1.0.5
       util: 0.12.5
     transitivePeerDependencies:
@@ -6879,13 +6900,13 @@ packages:
       invariant: 2.2.4
     dev: false
 
-  /expo-splash-screen/0.18.1_iahjlspuiswgkr2cudfjxc7ubq:
-    resolution: {integrity: sha512-1di1kuh14likGUs3fyVZWAqEMxhmdAjpmf9T8Qk5OzUa5oPEMEDYB2e2VprddWnJNBVVe/ojBDSCY8w56/LS0Q==}
+  /expo-splash-screen/0.18.2_iahjlspuiswgkr2cudfjxc7ubq:
+    resolution: {integrity: sha512-fsiKmyn/lbJtV6Uor6wSvl21fScOidFzmB/HHShQJJOu2TBN/vqMvhPu/r0bF5NVk8Wi64r98hiWY1EEsbW03w==}
     peerDependencies:
       expo: '*'
     dependencies:
       '@expo/configure-splash-screen': 0.6.0
-      '@expo/prebuild-config': 6.0.0_2km7asu7gnh4yobgzmxuseeaye
+      '@expo/prebuild-config': 6.0.1_2km7asu7gnh4yobgzmxuseeaye
       expo: 48.0.11_@babel+core@7.21.4
     transitivePeerDependencies:
       - encoding
@@ -7251,7 +7272,7 @@ packages:
     resolution: {integrity: sha512-7EwmXrOjyL+ChxMhmG5lnW9MPt1aIeZEwKhQzoBUdTV0N3zuwWDZYVJatDvZ2OyzPUvdIAZDsCetk3coyMfcnQ==}
     engines: {node: '>=0.10.0'}
 
-  /fork-ts-checker-webpack-plugin/6.5.3_snu7mwe3hywiqdnrbwxpp5zzri:
+  /fork-ts-checker-webpack-plugin/6.5.3_mlzltlvmj5prjy7ebp5dffhqpm:
     resolution: {integrity: sha512-SbH/l9ikmMWycd5puHJKTkZJKddF4iRLyW3DeZ08HTI7NGyLS38MXd/KGgeWumQO7YNQbW2u/NtPT2YowbPaGQ==}
     engines: {node: '>=10', yarn: '>=1.0.0'}
     peerDependencies:
@@ -7279,7 +7300,7 @@ packages:
       schema-utils: 2.7.0
       semver: 7.5.0
       tapable: 1.1.3
-      typescript: 5.0.4
+      typescript: 4.9.5
       webpack: 4.46.0
     dev: true
 
@@ -10547,13 +10568,13 @@ packages:
   /react-native-gradle-plugin/0.71.17:
     resolution: {integrity: sha512-OXXYgpISEqERwjSlaCiaQY6cTY5CH6j73gdkWpK0hedxtiWMWgH+i5TOi4hIGYitm9kQBeyDu+wim9fA8ROFJA==}
 
-  /react-native-modal-datetime-picker/14.0.1_aey6yp2ntqcs75ld4j26kvyzim:
+  /react-native-modal-datetime-picker/14.0.1_m7qh5j75b6qemaaty35w56nrf4:
     resolution: {integrity: sha512-wQt4Pjxt2jiTsVhLMG0E7WrRTYBEQx2d/nUrFVCbRqJ7lrXocXaT5UZsyMpV93TnKcyut62OprbO88wYq/vh0g==}
     peerDependencies:
       '@react-native-community/datetimepicker': '>=3.0.0'
       react-native: '>=0.65.0'
     dependencies:
-      '@react-native-community/datetimepicker': 6.7.5
+      '@react-native-community/datetimepicker': 6.7.3
       prop-types: 15.8.1
       react-native: 0.71.7_5uxi4zdir3aqroafmx7pnq5rdy
     dev: true
@@ -10564,8 +10585,8 @@ packages:
       prop-types: 15.8.1
     dev: true
 
-  /react-native-safe-area-context/4.5.1_sen2ivbtrxhzzk6vdoh233h3yi:
-    resolution: {integrity: sha512-bKcwk6zZvyz+VLoG6Uia1oiYU1jSbv1ysjEKSRLsLtPcDsbixsTc0UgfrPqjZxNTPzvYLMcr8ufA90UQauN4mw==}
+  /react-native-safe-area-context/4.5.0_sen2ivbtrxhzzk6vdoh233h3yi:
+    resolution: {integrity: sha512-0WORnk9SkREGUg2V7jHZbuN5x4vcxj/1B0QOcXJjdYWrzZHgLcUzYWWIUecUPJh747Mwjt/42RZDOaFn3L8kPQ==}
     peerDependencies:
       react: '*'
       react-native: '*'
@@ -12141,6 +12162,12 @@ packages:
 
   /typedarray/0.0.6:
     resolution: {integrity: sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==}
+    dev: true
+
+  /typescript/4.9.5:
+    resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
     dev: true
 
   /typescript/5.0.4:

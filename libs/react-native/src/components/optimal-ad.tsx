@@ -33,13 +33,35 @@ export const OptimalAd = ({
     return <Text>Loading...</Text>;
   }, [renderLoading]);
 
-  const handleVisible = useCallback(() => {
-    console.log("visible");
-  }, []);
+  const handleVisible = useCallback(async () => {
+    const url = decision?.view_url;
+    if (url) {
+      console.log({ url });
+      const response = await fetch(url);
+      if (!response.ok) {
+        console.warn(`Failed to load ad view: ${url}`);
+      }
+    }
+  }, [decision?.view_url]);
 
-  const handleHidden = useCallback((visibleDuration: number | null) => {
-    console.log({ visibleDuration });
-  }, []);
+  const handleHidden = useCallback(
+    async (visibleDurationInMillis: number | null) => {
+      console.log({ visibleDurationInMillis });
+      const url = decision?.view_time_url;
+
+      if (url && visibleDurationInMillis) {
+        console.log({ url, visibleDurationInMillis });
+        const params = new URLSearchParams({
+          view_time: Math.round(visibleDurationInMillis / 1000).toString(),
+        });
+        const response = await fetch(`${url}?${params}`);
+        if (!response.ok) {
+          console.warn(`Failed to load ad view: ${url}`);
+        }
+      }
+    },
+    [decision?.view_time_url],
+  );
 
   if (isLoading) {
     return <>{loading}</>;
