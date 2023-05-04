@@ -5,7 +5,7 @@ importers:
   .:
     specifiers:
       '@changesets/cli': ^2.26.1
-      '@getoptimal/eslint-config': ^0.1.0
+      '@getoptimal/eslint-config': workspace:*
       '@ianvs/prettier-plugin-sort-imports': ^3.7.2
       '@manypkg/cli': ^0.20.0
       '@types/prettier': ^2.7.2
@@ -97,7 +97,7 @@ importers:
 
   libs/js-sdk:
     specifiers:
-      '@getoptimal/eslint-config': ^0.1.8
+      '@getoptimal/eslint-config': workspace:*
       eslint: ^8.38.0
       tsup: ^6.7.0
       typescript: ^5.0.4
@@ -112,7 +112,7 @@ importers:
 
   libs/react-native:
     specifiers:
-      '@getoptimal/eslint-config': ^0.1.8
+      '@getoptimal/eslint-config': workspace:*
       '@getoptimal/js-sdk': workspace:*
       '@react-native-community/netinfo': ^9.3.9
       '@tanstack/react-query': ^4.29.5
