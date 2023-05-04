@@ -57,4 +57,4 @@ const styles = StyleSheet.create({
 
 ### More Examples
 
-See the example app [stories](./../../apps/react-native-test-app/src/components/) for more examples.
+See the example app [stories](https://github.com/0xOptimal/optimal-js-sdk/tree/main/apps/react-native-test-app/src/components) for more examples.
