@@ -1,58 +1,6 @@
 # Optimal JS SDK
 
-## Quick Start
-
-### Installation
-
-Install the package with your package manager of choice.
-
-```bash
-# npm
-npm install @optimal-js/sdk
-
-# yarn
-yarn add @optimal-js/sdk
-
-# pnpm
-pnpm add @optimal-js/sdk
-```
-
-### Usage
-
-See the following example for a quick start. `GetAdOpts` can be obtained from the Optimal team.
-
-```tsx
-import { Image, StyleSheet } from "react-native";
-
-import { OptimalAd, type sdk } from "@getoptimal/react-native";
-
-export const OptimalImageAd = (opts: sdk.GetAdOpts) => {
-  return (
-    <OptimalAd
-      opts={opts}
-      containerStyle={styles.adContainer}
-      renderAd={(decision) => (
-        <Image
-          source={{ uri: decision.image }}
-          resizeMode="contain"
-          style={styles.image}
-        />
-      )}
-    />
-  );
-};
-
-const styles = StyleSheet.create({
-  adContainer: {
-    width: "100%",
-    aspectRatio: 22 / 9,
-  },
-  image: {
-    width: "100%",
-    height: "100%",
-  },
-});
-```
+## Development
 
 ### Setup dependencies
 
@@ -60,8 +8,6 @@ const styles = StyleSheet.create({
 # Install dependencies
 pnpm i
 ```
-
-## Development
 
 ### Use iOS Simulator
 
