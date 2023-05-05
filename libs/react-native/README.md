@@ -33,10 +33,10 @@ Following example will render the ad automatically, if you would like to have mo
 
 #### Automatic
 
-```tsx
-import { OptimalAd, type sdk } from "@getoptimal/react-native";
+```jsx
+import { OptimalAd } from "@getoptimal/react-native";
 
-const opts: sdk.GetAdOpts = {
+const opts = {
   publisher: "publisher",
   adType: "ad type",
   viewerData: {
@@ -45,7 +45,15 @@ const opts: sdk.GetAdOpts = {
 };
 
 export const MyComponent = () => {
-  return <OptimalAd opts={opts} />;
+  return (
+    <OptimalAd
+      renderLoading={() => {
+        return <Text>i am loading</Text>;
+      }}
+      containerStyle={{ width: "100%" }}
+      opts={opts}
+    />
+  );
 };
 ```
 
