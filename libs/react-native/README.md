@@ -20,40 +20,50 @@ pnpm add @getoptimal/react-native
 ### Usage
 
 See the following example for a quick start. `GetAdOpts` can be obtained from the Optimal team.
-Typescript typings are included in the package.
+
+Following example will render the ad automatically, if you would like to have more control, check the next example.
+
+#### Automatic
 
 ```tsx
-import { Image, StyleSheet } from "react-native";
-
 import { OptimalAd, type sdk } from "@getoptimal/react-native";
 
-export const OptimalImageAd = (opts: sdk.GetAdOpts) => {
+const opts: sdk.GetAdOpts = {
+  publisher: "publisher",
+  adType: "ad type",
+  viewerData: {
+    wallets: ["1:wallet"],
+  },
+};
+
+export const MyComponent = ({ opts }: {}) => {
+  return <OptimalAd opts={opts} />;
+};
+```
+
+#### Manual
+
+You can also use the following example for custom ads:
+
+```tsx
+import { Text } from 'react-native';
+import { type OptimalPredefinedAdProps, OptimalCustomAd } from "@getoptimal/react-native";
+
+export const MyAd = (props: OptimalPredefinedAdProps) => {
   return (
-    <OptimalAd
-      opts={opts}
-      containerStyle={styles.adContainer}
-      renderAd={(decision) => (
-        <Image
-          source={{ uri: decision.image }}
-          resizeMode="contain"
-          style={styles.image}
-        />
-      )}
+    <OptimalCustomAd
+      {...props}
+      renderAd={(decision) => {
+        return <Text>your custom component</Text>
+      }
     />
   );
 };
-
-const styles = StyleSheet.create({
-  adContainer: {
-    width: "100%",
-    aspectRatio: 22 / 9,
-  },
-  image: {
-    width: "100%",
-    height: "100%",
-  },
-});
 ```
+
+### Typings
+
+Typescript typings are included in the package.
 
 ### More Examples
 

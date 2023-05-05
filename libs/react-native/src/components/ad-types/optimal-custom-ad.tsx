@@ -10,7 +10,7 @@ export const OptimalCustomAd = ({
   renderAd,
   renderLoading,
 }: OptimalAdProps) => {
-  const { data: decision, error, isLoading, isFetching } = useOptimalAd(opts);
+  const { data: decision, error, isLoading } = useOptimalAd(opts);
 
   const ad = useMemo(() => {
     if (!decision) {
