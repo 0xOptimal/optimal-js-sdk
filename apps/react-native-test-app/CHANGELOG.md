@@ -1,5 +1,11 @@
 # @getoptimal/react-native-test-app
 
+## 0.3.1
+
+### Patch Changes
+
+- readme
+
 ## 0.3.0
 
 ### Minor Changes

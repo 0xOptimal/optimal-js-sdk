@@ -17,6 +17,14 @@ yarn add @getoptimal/react-native
 pnpm add @getoptimal/react-native
 ```
 
+Then simply include `OptimalProvider` in the root of your app:
+
+```tsx
+<OptimalProvider>
+  <MyApp />
+</OptimalProvider>
+```
+
 ### Usage
 
 See the following example for a quick start. `GetAdOpts` can be obtained from the Optimal team.
@@ -36,7 +44,7 @@ const opts: sdk.GetAdOpts = {
   },
 };
 
-export const MyComponent = ({ opts }: {}) => {
+export const MyComponent = () => {
   return <OptimalAd opts={opts} />;
 };
 ```

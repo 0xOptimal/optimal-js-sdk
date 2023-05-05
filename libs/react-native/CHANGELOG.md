@@ -1,5 +1,13 @@
 # @getoptimal/react-native
 
+## 0.3.1
+
+### Patch Changes
+
+- readme
+- Updated dependencies
+  - @getoptimal/js-sdk@0.3.1
+
 ## 0.3.0
 
 ### Minor Changes
