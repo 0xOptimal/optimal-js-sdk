@@ -44,7 +44,8 @@ try {
 
 const getStories = () => {
   return {
-    "./src/components/optimal-image-ad.stories.tsx": require("../src/components/optimal-image-ad.stories.tsx"),
+    "./src/components/optimal-ad.stories.tsx": require("../src/components/optimal-ad.stories.tsx"),
+    "./src/components/screen-change.stories.tsx": require("../src/components/screen-change.stories.tsx"),
     "./src/components/visibility-sensor.stories.tsx": require("../src/components/visibility-sensor.stories.tsx"),
   };
 };

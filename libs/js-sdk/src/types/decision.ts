@@ -10,6 +10,7 @@ export interface Decision {
   body: string;
   copy: Copy;
   image?: string;
+  image_size?: [number, number];
   link: string;
   view_url: string;
   view_time_url: string;

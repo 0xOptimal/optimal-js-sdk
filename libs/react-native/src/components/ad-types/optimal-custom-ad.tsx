@@ -1,23 +1,16 @@
-import { useCallback, useMemo, type ReactNode } from "react";
-import { Text, type ViewProps } from "react-native";
+import { useCallback, useMemo } from "react";
 
-import { type Decision, type GetAdOpts } from "@getoptimal/js-sdk";
+import { useOptimalAd } from "../../hooks";
+import { type OptimalAdProps } from "../../types/optimal-ad-props";
+import VisibilitySensor from "../visibility-sensor";
 
-import { useOptimalAd } from "../hooks";
-import VisibilitySensor from "./visibility-sensor";
-
-export const OptimalAd = ({
+export const OptimalCustomAd = ({
   opts,
   containerStyle,
   renderAd,
   renderLoading,
-}: {
-  opts: GetAdOpts;
-  containerStyle?: ViewProps["style"];
-  renderAd: (decision: Decision) => ReactNode;
-  renderLoading?: () => ReactNode;
-}) => {
-  const { data: decision, error, isLoading } = useOptimalAd(opts);
+}: OptimalAdProps) => {
+  const { data: decision, error, isLoading, isFetching } = useOptimalAd(opts);
 
   const ad = useMemo(() => {
     if (!decision) {
@@ -30,7 +23,7 @@ export const OptimalAd = ({
     if (renderLoading) {
       return renderLoading();
     }
-    return <Text>Loading...</Text>;
+    return <></>;
   }, [renderLoading]);
 
   const handleVisible = useCallback(async () => {

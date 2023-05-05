@@ -119,12 +119,14 @@ importers:
       '@types/node': ^18.16.0
       '@types/react': ^18.0.37
       eslint: ^8.38.0
+      react-native-url-polyfill: ^1.3.0
       tsup: ^6.7.0
       typescript: ^5.0.4
     dependencies:
       '@getoptimal/js-sdk': link:../js-sdk
       '@react-native-community/netinfo': 9.3.9
       '@tanstack/react-query': 4.29.5
+      react-native-url-polyfill: 1.3.0
     devDependencies:
       '@getoptimal/eslint-config': link:../../packages/config/eslint
       '@types/node': 18.16.0
@@ -9894,6 +9896,14 @@ packages:
     resolution: {integrity: sha512-Ns7Bn9H/Tyw278+5SQx9oAblDZ7JixyzeOczcBK8dipQk2pD7Djkcfnf1nB/8RErAmMLL9iXgW0QHqiII8AhKw==}
     dev: true
 
+  /react-native-url-polyfill/1.3.0:
+    resolution: {integrity: sha512-w9JfSkvpqqlix9UjDvJjm1EjSt652zVQ6iwCIj1cVVkwXf4jQhQgTNXY6EVTwuAmUjg6BC6k9RHCBynoLFo3IQ==}
+    peerDependencies:
+      react-native: '*'
+    dependencies:
+      whatwg-url-without-unicode: 8.0.0-3
+    dev: false
+
   /react-native/0.71.7_5uxi4zdir3aqroafmx7pnq5rdy:
     resolution: {integrity: sha512-Id6iRLS581fJMFGbBl1jP5uSmjExtGOvw5Gvh7694zISXjsRAsFMmU+izs0pyCLqDBoHK7y4BT7WGPGw693nYw==}
     engines: {node: '>=14'}
@@ -11698,6 +11708,11 @@ packages:
     resolution: {integrity: sha512-YQ+BmxuTgd6UXZW3+ICGfyqRyHXVlD5GtQr5+qjiNW7bF0cqrzX500HVXPBOvgXb5YnzDd+h0zqyv61KUD7+Sg==}
     dev: true
 
+  /webidl-conversions/5.0.0:
+    resolution: {integrity: sha512-VlZwKPCkYKxQgeSbH5EyngOmRp7Ww7I9rQLERETtf5ofd9pGeswWiOtogpEO850jziPRarreGxn5QIiTqpb2wA==}
+    engines: {node: '>=8'}
+    dev: false
+
   /webpack-sources/1.4.3:
     resolution: {integrity: sha512-lgTS3Xhv1lCOKo7SA5TjKXMjpSM4sBjNV5+q2bqesbSPs5FjGmU6jjtBSkX9b4qW87vDIsCIlUPOEhbZrMdjeQ==}
     dependencies:
@@ -11747,6 +11762,15 @@ packages:
 
   /whatwg-fetch/3.6.2:
     resolution: {integrity: sha512-bJlen0FcuU/0EMLrdbJ7zOnW6ITZLrZMIarMUVmdKtsGvZna8vxKYaexICWPfZ8qwf9fzNq+UEIZrnSaApt6RA==}
+
+  /whatwg-url-without-unicode/8.0.0-3:
+    resolution: {integrity: sha512-HoKuzZrUlgpz35YO27XgD28uh/WJH4B0+3ttFqRo//lmq+9T/mIOJ6kqmINI9HpUpz1imRC/nR/lxKpJiv0uig==}
+    engines: {node: '>=10'}
+    dependencies:
+      buffer: 5.7.1
+      punycode: 2.3.0
+      webidl-conversions: 5.0.0
+    dev: false
 
   /whatwg-url/5.0.0:
     resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
