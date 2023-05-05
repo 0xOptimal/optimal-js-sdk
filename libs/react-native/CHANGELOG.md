@@ -1,5 +1,16 @@
 # @getoptimal/react-native
 
+## 0.3.0
+
+### Minor Changes
+
+- auto api
+
+### Patch Changes
+
+- Updated dependencies
+  - @getoptimal/js-sdk@0.3.0
+
 ## 0.2.2
 
 ### Patch Changes

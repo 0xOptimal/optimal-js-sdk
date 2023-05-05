@@ -1,5 +1,11 @@
 # @getoptimal/react-native-test-app
 
+## 0.3.0
+
+### Minor Changes
+
+- auto api
+
 ## 0.2.2
 
 ### Patch Changes

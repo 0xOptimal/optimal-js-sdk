@@ -1,6 +1,6 @@
 {
   "name": "@getoptimal/react-native-test-app",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "main": "index.tsx",
   "scripts": {
     "clean": "git clean -xdf .expo .turbo node_modules",

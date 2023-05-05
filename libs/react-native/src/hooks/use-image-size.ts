@@ -1,11 +1,18 @@
 import { useCallback, useMemo } from "react";
 import { Image } from "react-native";
-import { URL, URLSearchParams } from "react-native-url-polyfill";
+import {
+  URL as PolyURL,
+  URLSearchParams as PolyURLSearchParams,
+} from "react-native-url-polyfill";
 import { useQuery } from "@tanstack/react-query";
 
 import { type Decision } from "@getoptimal/js-sdk";
 
 import { optimalQueryContext } from "./use-optimal";
+
+const TypedUrl: typeof URL = PolyURL as never;
+const TypedURLSearchParams: typeof URLSearchParams =
+  PolyURLSearchParams as never;
 
 export const useImageSize = (decision?: Decision) => {
   const getImageSize = useCallback(() => {
@@ -35,13 +42,13 @@ export const useImageSize = (decision?: Decision) => {
     if (!decision?.image) {
       return;
     }
-    const imageUrl = new URL(decision.image);
+    const imageUrl = new TypedUrl(decision.image);
 
     const imageSearchEntries = [...imageUrl.searchParams.entries()];
     const filteredSearchEntries = imageSearchEntries.filter(
       ([key]) => !["AWSAccessKeyId", "Signature", "Expires"].includes(key),
     );
-    const newSearch = new URLSearchParams(filteredSearchEntries);
+    const newSearch = new TypedURLSearchParams(filteredSearchEntries);
     imageUrl.search = newSearch.toString();
   }, [decision?.image]);
 
@@ -53,6 +60,5 @@ export const useImageSize = (decision?: Decision) => {
       context: optimalQueryContext,
     },
   );
-
   return { imageSize, hasImage: !!decision?.image, isLoading };
 };
