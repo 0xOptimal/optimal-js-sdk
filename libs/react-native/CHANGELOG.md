@@ -1,5 +1,13 @@
 # @getoptimal/react-native
 
+## 0.3.3
+
+### Patch Changes
+
+- bug fix on view tracking
+- Updated dependencies
+  - @getoptimal/js-sdk@0.3.3
+
 ## 0.3.2
 
 ### Patch Changes

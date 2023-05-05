@@ -68,12 +68,12 @@ const ScreenChangeTest = (props: OptimalAdProps) => {
         </Button>
       </View>
       <View style={styles.tabContainer}>
-        {tab === "1" && <OptimalAd {...props} />}
-        {tab === "2" && (
+        {tab === "1" && (
           <View>
-            <Text>Nothing to see here</Text>
+            <Text>Go to tab 2 for content</Text>
           </View>
         )}
+        {tab === "2" && <OptimalAd {...props} />}
       </View>
     </View>
   );

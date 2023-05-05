@@ -1,5 +1,11 @@
 # @getoptimal/react-native-test-app
 
+## 0.3.3
+
+### Patch Changes
+
+- bug fix on view tracking
+
 ## 0.3.2
 
 ### Patch Changes

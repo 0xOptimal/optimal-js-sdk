@@ -1,52 +1,75 @@
-import { useState } from "react";
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { useCallback, useState } from "react";
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableWithoutFeedback,
+  View,
+} from "react-native";
 
-import { VisibilitySensor } from "@getoptimal/react-native";
+import {
+  OptimalAd,
+  VisibilitySensor,
+  type OptimalAdProps,
+} from "@getoptimal/react-native";
 
-const VisibilitySensorTest = () => {
+const VisibilitySensorTest = (props: OptimalAdProps) => {
   const [text, setText] = useState("Idle");
 
+  const [contentShown, setContentShown] = useState(false);
+  const handleRefresh = useCallback(() => {
+    setContentShown(false);
+    setTimeout(() => {
+      setContentShown(true);
+    }, 100);
+  }, []);
+
   return (
-    <View>
+    <View style={styles.screen}>
       <View style={styles.status}>
         <Text style={styles.statusText}>{text}</Text>
       </View>
-      <ScrollView style={styles.scroller}>
-        <View style={styles.itemContainer}>
-          <View style={styles.placeholder}>
-            <Text>Placeholder 1</Text>
-          </View>
-          <View style={styles.placeholder}>
-            <Text>Placeholder 2</Text>
-          </View>
-          <View>
-            <VisibilitySensor
-              onVisible={() => {
-                setText("Visible");
-              }}
-              onHidden={(visibleDuration) => {
-                const durationText = visibleDuration
-                  ? `, last visible for ${visibleDuration / 1000} seconds`
-                  : "";
-                setText(`Hidden${durationText}`);
-              }}
-            >
-              <View style={styles.container}>
-                <Text style={styles.text}>This area is being tracked</Text>
-              </View>
-            </VisibilitySensor>
-          </View>
-          <View style={styles.placeholder}>
-            <Text>Placeholder 3</Text>
-          </View>
-          <View style={styles.placeholder}>
-            <Text>Placeholder 4</Text>
-          </View>
-          <View style={styles.placeholder}>
-            <Text>Placeholder 5</Text>
-          </View>
+      <TouchableWithoutFeedback onPress={() => handleRefresh()}>
+        <View style={styles.refresh}>
+          <Text style={styles.statusText}>Refresh</Text>
         </View>
-      </ScrollView>
+      </TouchableWithoutFeedback>
+      {contentShown && (
+        <ScrollView style={styles.scroller}>
+          <View style={styles.itemContainer}>
+            <View style={styles.placeholder}>
+              <Text>Placeholder 1</Text>
+            </View>
+            <View style={styles.placeholder}>
+              <Text>Placeholder 2</Text>
+            </View>
+            <View>
+              <VisibilitySensor
+                onVisible={() => {
+                  setText("Visible");
+                }}
+                onHidden={(visibleDuration) => {
+                  const durationText = visibleDuration
+                    ? `, last visible for ${visibleDuration / 1000} seconds`
+                    : "";
+                  setText(`Hidden${durationText}`);
+                }}
+              >
+                <OptimalAd {...props} containerStyle={styles.ad} />
+              </VisibilitySensor>
+            </View>
+            <View style={styles.placeholder}>
+              <Text>Placeholder 3</Text>
+            </View>
+            <View style={styles.placeholder}>
+              <Text>Placeholder 4</Text>
+            </View>
+            <View style={styles.placeholder}>
+              <Text>Placeholder 5</Text>
+            </View>
+          </View>
+        </ScrollView>
+      )}
     </View>
   );
 };
@@ -54,6 +77,9 @@ const VisibilitySensorTest = () => {
 const styles = StyleSheet.create({
   scroller: {
     marginTop: 50,
+  },
+  screen: {
+    height: "100%",
   },
   container: {
     height: 200,
@@ -87,6 +113,18 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: 8,
   },
+  refresh: {
+    position: "absolute",
+    bottom: 10,
+    left: 40,
+    right: 40,
+    height: 60,
+    backgroundColor: "rgba(120, 120, 250, 1)",
+    zIndex: 20,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 8,
+  },
   statusText: {
     color: "white",
     fontWeight: "700",
@@ -94,11 +132,24 @@ const styles = StyleSheet.create({
   itemContainer: {
     gap: 10,
   },
+  ad: {
+    width: "100%",
+  },
 });
 
 export default {
   title: "Visibility Sensor",
   component: VisibilitySensorTest,
+  args: {
+    opts: {
+      publisher: "templewallet",
+      adType: "tw-fullview",
+      viewerData: {
+        wallets: ["1:0x31AC3823d91A7B66CE0F4087d9a1D4A76300fA72"],
+      },
+    },
+    renderLoading: () => <Text>Loading...</Text>,
+  },
 };
 
 export const Default = {};
