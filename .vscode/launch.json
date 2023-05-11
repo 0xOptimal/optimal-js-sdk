@@ -8,6 +8,14 @@
       "command": "pnpm dev",
       "cwd": "${workspaceFolder}/apps/react-native-test-app/",
       "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "React Test App",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "pnpm dev",
+      "cwd": "${workspaceFolder}/apps/react-test-app/",
+      "skipFiles": ["<node_internals>/**"]
     }
   ]
 }

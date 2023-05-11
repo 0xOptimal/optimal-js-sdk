@@ -1,0 +1,47 @@
+{
+  "name": "@getoptimal/react",
+  "version": "0.3.4",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "type": "module",
+  "publishConfig": {
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "lint": "eslint .",
+    "lint:fix": "pnpm lint --fix",
+    "type-check": "tsc --noEmit",
+    "build": "tsup-node index.ts"
+  },
+  "tsup": {
+    "format": [
+      "esm"
+    ],
+    "dts": true,
+    "splitting": true,
+    "sourcemap": true,
+    "clean": true
+  },
+  "dependencies": {
+    "@getoptimal/js-sdk": "workspace:*",
+    "@getoptimal/react-helpers": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": ">=16",
+    "react-dom": ">=16"
+  },
+  "devDependencies": {
+    "@getoptimal/eslint-config": "workspace:*",
+    "eslint": "^8.38.0",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4",
+    "react": ">=16",
+    "react-dom": ">=16"
+  }
+}

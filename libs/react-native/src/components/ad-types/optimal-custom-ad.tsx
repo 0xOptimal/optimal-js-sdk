@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef } from "react";
 
+import { type OptimalAdProps } from "@getoptimal/react-helpers";
+
 import { useOptimalAd } from "../../hooks";
-import { type OptimalAdProps } from "../../types/optimal-ad-props";
 import VisibilitySensor from "../visibility-sensor";
 
 export const OptimalCustomAd = ({

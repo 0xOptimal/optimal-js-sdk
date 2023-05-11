@@ -1,4 +1,5 @@
-import { type OptimalPredefinedAdProps } from "../../types";
+import { type OptimalPredefinedAdProps } from "@getoptimal/react-helpers";
+
 import { ImageAdBody } from "../ad-body";
 import { OptimalCustomAd } from "./optimal-custom-ad";
 

@@ -16,6 +16,8 @@
     "**/.turbo": true,
     "**/dist": true,
     "**/.tsbuildinfo": true,
-    "**/tsconfig.tsbuildinfo": true
+    "**/tsconfig.tsbuildinfo": true,
+    "**/.next": true,
+    "**/next-env.d.ts": true
   }
 }

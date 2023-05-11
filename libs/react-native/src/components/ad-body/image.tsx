@@ -1,9 +1,9 @@
 import { Image, type ImageProps } from "react-native";
 
 import { type Decision } from "@getoptimal/js-sdk";
+import { type OptimalAdProps } from "@getoptimal/react-helpers";
 
 import { useImageSize } from "../../hooks";
-import { type OptimalAdProps } from "../../types";
 
 export const ImageAdBody = ({
   decision,

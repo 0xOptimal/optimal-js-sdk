@@ -1,0 +1,32 @@
+{
+  "name": "@getoptimal/react-test-app",
+  "version": "0.3.4",
+  "private": true,
+  "scripts": {
+    "build": "pnpm next build",
+    "clean": "git clean -xdf .next .turbo node_modules",
+    "dev": "pnpm next dev",
+    "lint": "next lint",
+    "lint:fix": "pnpm lint --fix",
+    "start": "pnpm next start",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@getoptimal/react": "workspace:*",
+    "next": "^13.4.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@getoptimal/eslint-config": "workspace:*",
+    "@getoptimal/tailwind-config": "workspace:*",
+    "@types/node": "^18.16.5",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.40.0",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.2",
+    "typescript": "^5.0.4"
+  }
+}
