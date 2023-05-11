@@ -61,4 +61,31 @@ export class OptimalClient {
 
     return response.json() as Promise<Decision>;
   }
+
+  public async trackView(decision: Decision) {
+    const url = decision.view_url;
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Failed to load ad view: ${url}`);
+    }
+  }
+
+  public async trackViewTime(
+    decision: Decision,
+    visibleDurationInMillis: number | null,
+  ) {
+    const url = decision?.view_time_url;
+
+    if (url && visibleDurationInMillis) {
+      const params = new URLSearchParams({
+        view_time: Math.ceil(visibleDurationInMillis / 1000).toString(),
+      });
+      const trackUrl = `${url}?${params}`;
+      const response = await fetch(trackUrl);
+
+      if (!response.ok) {
+        throw new Error(`Failed to load ad view: ${trackUrl}`);
+      }
+    }
+  }
 }

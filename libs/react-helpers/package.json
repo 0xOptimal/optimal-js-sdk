@@ -1,5 +1,5 @@
 {
-  "name": "@getoptimal/js-sdk",
+  "name": "@getoptimal/react-helpers",
   "version": "0.3.4",
   "main": "./index.ts",
   "types": "./index.ts",
@@ -28,12 +28,17 @@
     "clean": true
   },
   "dependencies": {
-    "zod": "^3.21.4"
+    "@tanstack/react-query": "^4.29.5",
+    "@getoptimal/js-sdk": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": ">=16"
   },
   "devDependencies": {
     "@getoptimal/eslint-config": "workspace:*",
     "eslint": "^8.38.0",
     "tsup": "^6.7.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "react": ">=16"
   }
 }
