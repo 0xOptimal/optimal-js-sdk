@@ -34,6 +34,12 @@ pnpm i
    # bump the version
    pnpm exec changeset version
 
+   # update dependency versions
+   pnpm lint:fix
+
+   # update the lock file
+   pnpm install
+
    # build the project again so that version numbers are updated in the code
    pnpm exec turbo run build
 

@@ -29,6 +29,7 @@ export const ImageAdBody = ({
 
   return (
     <Image
+      alt="Ad"
       source={{ uri: decision.image }}
       resizeMode="contain"
       style={[

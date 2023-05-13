@@ -12,12 +12,12 @@
     "dev": "turbo dev --parallel",
     "format": "prettier --write \"**/*.{js,cjs,mjs,ts,tsx,md,json}\" --ignore-path .gitignore",
     "lint": "turbo lint && manypkg check",
-    "lint:fix": "turbo lint:fix",
+    "lint:fix": "turbo lint:fix && manypkg fix",
     "type-check": "turbo type-check"
   },
   "dependencies": {
     "@changesets/cli": "^2.26.1",
-    "@getoptimal/eslint-config": "*",
+    "@getoptimal/eslint-config": "0.3.6",
     "@ianvs/prettier-plugin-sort-imports": "^3.7.2",
     "@manypkg/cli": "^0.20.0",
     "@types/prettier": "^2.7.2",
