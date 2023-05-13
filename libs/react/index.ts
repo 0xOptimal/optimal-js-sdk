@@ -1,6 +1,7 @@
 import * as sdk from "@getoptimal/js-sdk";
 
-export * from "./src/dummy";
+export * from "./src/components";
+export * from "./src/hooks";
 
 export { sdk };
 

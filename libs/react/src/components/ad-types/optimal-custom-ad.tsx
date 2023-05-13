@@ -1,10 +1,15 @@
-import { useCallback, useEffect, useMemo, useRef } from "react";
-import { type ViewProps } from "react-native/types";
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  type CSSProperties,
+} from "react";
+import { InView } from "react-intersection-observer";
 
 import { type OptimalAdProps } from "@getoptimal/react-helpers";
 
 import { useOptimalAd } from "../../hooks";
-import VisibilitySensor from "../visibility-sensor";
 
 export const OptimalCustomAd = ({
   opts,
@@ -13,7 +18,7 @@ export const OptimalCustomAd = ({
   renderLoading,
   onViewStart,
   onViewEnd,
-}: OptimalAdProps<ViewProps["style"]>) => {
+}: OptimalAdProps<CSSProperties>) => {
   const { decision, error, isLoading, trackView, trackViewTime } =
     useOptimalAd(opts);
 
@@ -50,18 +55,29 @@ export const OptimalCustomAd = ({
     return <></>;
   }, [renderLoading]);
 
+  const becameVisibleAt = useRef<number | null>(null);
+
   const handleVisible = useCallback(async () => {
+    becameVisibleAt.current = Date.now();
     onViewStart?.();
     await trackView();
   }, [onViewStart, trackView]);
 
-  const handleHidden = useCallback(
-    async (visibleDurationInMillis: number | null) => {
-      onViewEnd?.();
-      await trackViewTime(visibleDurationInMillis);
-    },
-    [onViewEnd, trackViewTime],
-  );
+  const handleHidden = useCallback(async () => {
+    if (!becameVisibleAt.current) {
+      return;
+    }
+    const visibleDurationInMillis = Date.now() - becameVisibleAt.current;
+    becameVisibleAt.current = null;
+    onViewEnd?.();
+    await trackViewTime(visibleDurationInMillis);
+  }, [onViewEnd, trackViewTime]);
+
+  useEffect(() => {
+    return () => {
+      handleHidden().catch(() => null);
+    };
+  }, [handleHidden]);
 
   if (isLoading) {
     return <>{loading}</>;
@@ -72,12 +88,19 @@ export const OptimalCustomAd = ({
   }
 
   return (
-    <VisibilitySensor
+    <InView
+      as="div"
       style={containerStyle}
-      onVisible={handleVisible}
-      onHidden={handleHidden}
+      threshold={0.5}
+      onChange={async (inView) => {
+        if (inView) {
+          await handleVisible();
+        } else {
+          await handleHidden();
+        }
+      }}
     >
       {ad}
-    </VisibilitySensor>
+    </InView>
   );
 };

@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useRef } from "react";
+import { useCallback, useId, useMemo, useRef } from "react";
 import { useQuery, type QueryClient } from "@tanstack/react-query";
 
 import { type GetAdOpts, type OptimalClient } from "@getoptimal/js-sdk";
@@ -9,11 +9,13 @@ declare global {
   const __DEV__: boolean | undefined;
 }
 
-const TWO_SECONDS = 2 * 1000;
+const FIVE_MINUTES = 5 * 60 * 1000;
 
 const log = (...args: unknown[]) => {
   if (
     process.env.NODE_ENV === "development" ||
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     process.env.NODE_ENV === "dev" ||
     __DEV__
   ) {
@@ -27,15 +29,16 @@ export const createOptimalAdHook = (
 ) => {
   const useOptimalAd = (opts: GetAdOpts) => {
     const optimal = useOptimal();
+    const id = useId();
 
     const {
       data: decision,
       error,
       isLoading,
-    } = useQuery([opts], () => optimal.getAd(opts), {
+    } = useQuery([opts, id], () => optimal.getAd(opts), {
       context,
-      staleTime: TWO_SECONDS,
-      cacheTime: 0,
+      staleTime: FIVE_MINUTES,
+      cacheTime: FIVE_MINUTES,
     });
 
     const viewTracked = useRef(false);

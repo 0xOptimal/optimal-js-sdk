@@ -30,7 +30,9 @@
   },
   "dependencies": {
     "@getoptimal/js-sdk": "workspace:*",
-    "@getoptimal/react-helpers": "workspace:*"
+    "@getoptimal/react-helpers": "workspace:*",
+    "@tanstack/react-query": "^4.29.5",
+    "react-intersection-observer": "^9.4.3"
   },
   "peerDependencies": {
     "react": ">=16",

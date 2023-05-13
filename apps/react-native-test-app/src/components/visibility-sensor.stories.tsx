@@ -5,6 +5,7 @@ import {
   Text,
   TouchableWithoutFeedback,
   View,
+  type ViewProps,
 } from "react-native";
 
 import {
@@ -13,7 +14,7 @@ import {
   type OptimalAdProps,
 } from "@getoptimal/react-native";
 
-const VisibilitySensorTest = (props: OptimalAdProps) => {
+const VisibilitySensorTest = (props: OptimalAdProps<ViewProps["style"]>) => {
   const [text, setText] = useState("Idle");
 
   const [contentShown, setContentShown] = useState(false);
