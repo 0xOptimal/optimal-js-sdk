@@ -3,6 +3,7 @@ const config = {
   extends: [
     "@react-native-community",
     "turbo",
+    "next",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "prettier",

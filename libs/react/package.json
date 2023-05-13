@@ -1,6 +1,6 @@
 {
   "name": "@getoptimal/react",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "main": "./index.ts",
   "types": "./index.ts",
   "type": "module",
@@ -29,8 +29,8 @@
     "clean": true
   },
   "dependencies": {
-    "@getoptimal/js-sdk": "workspace:*",
-    "@getoptimal/react-helpers": "workspace:*",
+    "@getoptimal/js-sdk": "*",
+    "@getoptimal/react-helpers": "*",
     "@tanstack/react-query": "^4.29.5",
     "react-intersection-observer": "^9.4.3"
   },
@@ -39,11 +39,11 @@
     "react-dom": ">=16"
   },
   "devDependencies": {
-    "@getoptimal/eslint-config": "workspace:*",
+    "@getoptimal/eslint-config": "*",
     "eslint": "^8.38.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "tsup": "^6.7.0",
-    "typescript": "^5.0.4",
-    "react": ">=16",
-    "react-dom": ">=16"
+    "typescript": "^5.0.4"
   }
 }
