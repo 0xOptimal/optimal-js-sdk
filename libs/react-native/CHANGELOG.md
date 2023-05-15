@@ -1,5 +1,14 @@
 # @getoptimal/react-native
 
+## 0.3.7
+
+### Patch Changes
+
+- fix issue
+- Updated dependencies
+  - @getoptimal/js-sdk@0.3.7
+  - @getoptimal/react-helpers@0.3.7
+
 ## 0.3.6
 
 ### Patch Changes

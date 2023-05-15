@@ -1,5 +1,11 @@
 # @getoptimal/tailwind-config
 
+## 0.3.7
+
+### Patch Changes
+
+- fix issue
+
 ## 0.3.6
 
 ### Patch Changes
