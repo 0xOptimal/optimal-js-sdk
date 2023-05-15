@@ -1,5 +1,13 @@
 # @getoptimal/react-test-app
 
+## 0.3.9
+
+### Patch Changes
+
+- add readme
+- Updated dependencies
+  - @getoptimal/react@0.3.9
+
 ## 0.3.8
 
 ### Patch Changes
