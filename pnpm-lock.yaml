@@ -8,7 +8,7 @@ importers:
         specifier: ^2.26.1
         version: 2.26.1
       '@getoptimal/eslint-config':
-        specifier: 0.3.7
+        specifier: 0.3.8
         version: link:packages/config/eslint
       '@ianvs/prettier-plugin-sort-imports':
         specifier: ^3.7.2
@@ -78,10 +78,10 @@ importers:
         specifier: ^6.0.1
         version: 6.0.1
       '@getoptimal/eslint-config':
-        specifier: 0.3.7
+        specifier: 0.3.8
         version: link:../../packages/config/eslint
       '@getoptimal/react-native':
-        specifier: 0.3.7
+        specifier: 0.3.8
         version: link:../../libs/react-native
       '@react-native-async-storage/async-storage':
         specifier: 1.17.11
@@ -138,7 +138,7 @@ importers:
   apps/react-test-app:
     dependencies:
       '@getoptimal/react':
-        specifier: 0.3.7
+        specifier: 0.3.8
         version: link:../../libs/react
       '@headlessui/react':
         specifier: ^1.7.14
@@ -161,15 +161,12 @@ importers:
       react-hot-toast:
         specifier: ^2.4.1
         version: 2.4.1(csstype@3.1.2)(react-dom@18.2.0)(react@18.2.0)
-      react-image:
-        specifier: ^4.1.0
-        version: 4.1.0(@babel/runtime@7.21.0)(react-dom@18.2.0)(react@18.2.0)
     devDependencies:
       '@getoptimal/eslint-config':
-        specifier: 0.3.7
+        specifier: 0.3.8
         version: link:../../packages/config/eslint
       '@getoptimal/tailwind-config':
-        specifier: 0.3.7
+        specifier: 0.3.8
         version: link:../../packages/config/tailwind
       '@types/node':
         specifier: ^18.16.0
@@ -203,7 +200,7 @@ importers:
         version: 3.21.4
     devDependencies:
       '@getoptimal/eslint-config':
-        specifier: 0.3.7
+        specifier: 0.3.8
         version: link:../../packages/config/eslint
       eslint:
         specifier: ^8.38.0
@@ -218,20 +215,23 @@ importers:
   libs/react:
     dependencies:
       '@getoptimal/js-sdk':
-        specifier: 0.3.7
+        specifier: 0.3.8
         version: link:../js-sdk
       '@getoptimal/react-helpers':
-        specifier: 0.3.7
+        specifier: 0.3.8
         version: link:../react-helpers
       '@tanstack/react-query':
         specifier: ^4.29.5
         version: 4.29.5(react-dom@18.2.0)(react@18.2.0)
+      react-image:
+        specifier: ^4.1.0
+        version: 4.1.0(@babel/runtime@7.21.0)(react-dom@18.2.0)(react@18.2.0)
       react-intersection-observer:
         specifier: ^9.4.3
         version: 9.4.3(react@18.2.0)
     devDependencies:
       '@getoptimal/eslint-config':
-        specifier: 0.3.7
+        specifier: 0.3.8
         version: link:../../packages/config/eslint
       eslint:
         specifier: ^8.38.0
@@ -252,14 +252,14 @@ importers:
   libs/react-helpers:
     dependencies:
       '@getoptimal/js-sdk':
-        specifier: 0.3.7
+        specifier: 0.3.8
         version: link:../js-sdk
       '@tanstack/react-query':
         specifier: ^4.29.5
         version: 4.29.5(react-native@0.71.7)(react@18.2.0)
     devDependencies:
       '@getoptimal/eslint-config':
-        specifier: 0.3.7
+        specifier: 0.3.8
         version: link:../../packages/config/eslint
       eslint:
         specifier: ^8.38.0
@@ -277,10 +277,10 @@ importers:
   libs/react-native:
     dependencies:
       '@getoptimal/js-sdk':
-        specifier: 0.3.7
+        specifier: 0.3.8
         version: link:../js-sdk
       '@getoptimal/react-helpers':
-        specifier: 0.3.7
+        specifier: 0.3.8
         version: link:../react-helpers
       '@react-native-community/netinfo':
         specifier: ^9.3.9
@@ -293,7 +293,7 @@ importers:
         version: 1.3.0(react-native@0.71.7)
     devDependencies:
       '@getoptimal/eslint-config':
-        specifier: 0.3.7
+        specifier: 0.3.8
         version: link:../../packages/config/eslint
       '@types/node':
         specifier: ^18.16.0

@@ -1,5 +1,14 @@
 # @getoptimal/react
 
+## 0.3.8
+
+### Patch Changes
+
+- add dep
+- Updated dependencies
+  - @getoptimal/js-sdk@0.3.8
+  - @getoptimal/react-helpers@0.3.8
+
 ## 0.3.7
 
 ### Patch Changes

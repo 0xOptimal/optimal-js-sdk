@@ -1,5 +1,11 @@
 # @getoptimal/js-sdk
 
+## 0.3.8
+
+### Patch Changes
+
+- add dep
+
 ## 0.3.7
 
 ### Patch Changes
