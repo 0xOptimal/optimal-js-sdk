@@ -1,5 +1,15 @@
 # @getoptimal/react-test-app
 
+## 0.3.10
+
+### Patch Changes
+
+- 371d703: update api
+- update rn version
+- Updated dependencies [371d703]
+- Updated dependencies
+  - @getoptimal/react@0.3.10
+
 ## 0.3.9
 
 ### Patch Changes

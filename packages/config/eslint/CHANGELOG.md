@@ -1,5 +1,12 @@
 # @getoptimal/eslint-config
 
+## 0.3.10
+
+### Patch Changes
+
+- 371d703: update api
+- update rn version
+
 ## 0.3.9
 
 ### Patch Changes
