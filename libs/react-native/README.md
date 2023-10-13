@@ -22,14 +22,16 @@ Then simply include `OptimalProvider` in the root of your app:
 ```tsx
 <OptimalProvider>
   <MyApp />
-</OptimalProvider>
+</OptimalProvider>;
 ```
 
 ### Usage
 
-See the following example for a quick start. `GetAdOpts` can be obtained from the Optimal team.
+See the following example for a quick start. `GetAdOpts` can be obtained from
+the Optimal team.
 
-Following example will render the ad automatically, if you would like to have more control, check the next example.
+Following example will render the ad automatically, if you would like to have
+more control, check the next example.
 
 #### Automatic
 
@@ -38,7 +40,7 @@ import { OptimalAd } from "@getoptimal/react-native";
 
 const opts = {
   publisher: "publisher",
-  adType: "ad type",
+  adTypes: []"ad type"],
   viewerData: {
     wallets: ["1:wallet"],
   },
@@ -83,4 +85,6 @@ Typescript typings are included in the package.
 
 ### More Examples
 
-See the example app [stories](https://github.com/0xOptimal/optimal-js-sdk/tree/main/apps/react-native-test-app/src/components) for more examples.
+See the example app
+[stories](https://github.com/0xOptimal/optimal-js-sdk/tree/main/apps/react-native-test-app/src/components)
+for more examples.

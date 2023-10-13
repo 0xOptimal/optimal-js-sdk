@@ -9,14 +9,16 @@ export type OptimalConfig = {
 
 export type GetAdOpts = {
   publisher: string;
-  adType: string;
+  adTypes: string[];
   keywords?: string[];
   campaignTypes?: string[];
+  priorities?: string[];
   viewerData: {
     wallets: string[];
   };
   forceAd?: boolean;
   forceCampaign?: boolean;
+  url?: string;
 };
 
 export class OptimalClient {
@@ -28,13 +30,9 @@ export class OptimalClient {
   public async getAd(opts: GetAdOpts): Promise<Decision> {
     const params: Record<string, string> = {
       publisher: opts.publisher,
-      ad_types: opts.adType,
-      campaign_types: (
-        opts.campaignTypes ?? ["paid", "publisher-house", "community", "house"]
-      ).join("|"),
+      ad_types: opts.adTypes.join("|"),
       client_version: AD_CLIENT_VERSION,
       wallets: opts.viewerData.wallets.join("|"),
-      div_ids: "notused",
     };
 
     if (opts.keywords) {
@@ -47,6 +45,18 @@ export class OptimalClient {
 
     if (opts.forceCampaign !== undefined) {
       params.force_campaign = opts.forceCampaign.toString();
+    }
+
+    if (opts.priorities !== undefined) {
+      params.priorities = opts.priorities.join("|");
+    }
+
+    if (opts.campaignTypes !== undefined) {
+      params.campaign_types = opts.campaignTypes.join("|");
+    }
+
+    if (opts.url !== undefined) {
+      params.url = opts.url;
     }
 
     const response = await fetch(

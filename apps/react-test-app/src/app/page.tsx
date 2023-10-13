@@ -45,10 +45,13 @@ export default function Page() {
               <div className="rounded-lg border-2 flex justify-center items-cente p-4 border-green-100">
                 <OptimalAd
                   opts={{
-                    publisher: "templewallet",
-                    adType: "tw-fullview",
+                    publisher: "test-publisher",
+                    adTypes: ["sq-img-text-box"],
                     viewerData: {
-                      wallets: ["1:0x31AC3823d91A7B66CE0F4087d9a1D4A76300fA72"],
+                      wallets: [
+                        "1:0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+                        "1:0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B",
+                      ],
                     },
                   }}
                   renderLoading={() => <div>Loading...</div>}
@@ -79,11 +82,12 @@ export default function Page() {
                   <Tab.Panel>
                     <OptimalAd
                       opts={{
-                        publisher: "templewallet",
-                        adType: "tw-fullview",
+                        publisher: "test-publisher",
+                        adTypes: ["sq-img-text-box"],
                         viewerData: {
                           wallets: [
-                            "1:0x31AC3823d91A7B66CE0F4087d9a1D4A76300fA72",
+                            "1:0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+                            "1:0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B",
                           ],
                         },
                       }}
@@ -112,10 +116,13 @@ export default function Page() {
               <div className="rounded-lg border-2 flex justify-center items-cente p-4 border-green-100">
                 <OptimalAd
                   opts={{
-                    publisher: "templewallet",
-                    adType: "tw-fullview",
+                    publisher: "test-publisher",
+                    adTypes: ["sq-img-text-box"],
                     viewerData: {
-                      wallets: ["1:0x31AC3823d91A7B66CE0F4087d9a1D4A76300fA72"],
+                      wallets: [
+                        "1:0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+                        "1:0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B",
+                      ],
                     },
                   }}
                   renderLoading={() => <div>Loading...</div>}
