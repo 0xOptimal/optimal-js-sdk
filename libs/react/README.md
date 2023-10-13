@@ -40,7 +40,7 @@ import { OptimalAd } from "@getoptimal/react";
 
 const opts = {
   publisher: "publisher",
-  adTypes: []"ad type"],
+  adTypes: ["ad type"],
   viewerData: {
     wallets: ["1:wallet"],
   },
