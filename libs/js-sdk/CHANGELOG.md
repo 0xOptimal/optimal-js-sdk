@@ -1,5 +1,11 @@
 # @getoptimal/js-sdk
 
+## 0.3.13
+
+### Patch Changes
+
+- update build process
+
 ## 0.3.12
 
 ### Patch Changes

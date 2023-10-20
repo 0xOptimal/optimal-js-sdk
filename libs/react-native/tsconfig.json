@@ -3,6 +3,7 @@
   "include": ["src", "index.ts", "sdk.ts"],
   "compilerOptions": {
     "tsBuildInfoFile": ".tsbuildinfo",
-    "jsx": "react-native"
+    "jsx": "react-native",
+    "jsxImportSource": "react"
   }
 }
