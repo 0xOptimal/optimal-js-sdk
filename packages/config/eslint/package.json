@@ -1,7 +1,7 @@
 {
   "name": "@getoptimal/eslint-config",
   "private": true,
-  "version": "0.3.10",
+  "version": "0.3.11",
   "main": "index.js",
   "dependencies": {
     "@react-native-community/eslint-config": "^3.2.0",
