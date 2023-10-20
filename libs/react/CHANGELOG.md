@@ -1,5 +1,14 @@
 # @getoptimal/react
 
+## 0.3.14
+
+### Patch Changes
+
+- backward compat
+- Updated dependencies
+  - @getoptimal/react-helpers@0.3.14
+  - @getoptimal/js-sdk@0.3.14
+
 ## 0.3.13
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @getoptimal/react-test-app
 
+## 0.3.14
+
+### Patch Changes
+
+- backward compat
+- Updated dependencies
+  - @getoptimal/react@0.3.14
+
 ## 0.3.13
 
 ### Patch Changes

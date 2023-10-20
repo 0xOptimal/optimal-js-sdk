@@ -1,4 +1,4 @@
-import { useCallback, useId, useMemo, useRef } from "react";
+import { useCallback, useMemo, useRef } from "react";
 import { useQuery, type QueryClient } from "@tanstack/react-query";
 
 import { type GetAdOpts, type OptimalClient } from "@getoptimal/js-sdk";
@@ -29,13 +29,12 @@ export const createOptimalAdHook = (
 ) => {
   const useOptimalAd = (opts: GetAdOpts) => {
     const optimal = useOptimal();
-    const id = useId();
 
     const {
       data: decision,
       error,
       isLoading,
-    } = useQuery([opts, id], () => optimal.getAd(opts), {
+    } = useQuery([JSON.stringify(opts)], () => optimal.getAd(opts), {
       context,
       staleTime: FIVE_MINUTES,
       cacheTime: FIVE_MINUTES,
