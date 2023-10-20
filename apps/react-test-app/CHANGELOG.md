@@ -1,5 +1,13 @@
 # @getoptimal/react-test-app
 
+## 0.3.12
+
+### Patch Changes
+
+- internal maintenance
+- Updated dependencies
+  - @getoptimal/react@0.3.12
+
 ## 0.3.11
 
 ### Patch Changes

@@ -1,3 +1,5 @@
+import React from "react";
+
 import { type OptimalPredefinedAdProps } from "@getoptimal/react-helpers";
 
 import { ImageAdBody } from "../ad-body";

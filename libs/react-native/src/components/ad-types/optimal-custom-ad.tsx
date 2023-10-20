@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef } from "react";
+import React, { useCallback, useEffect, useMemo, useRef } from "react";
 import { type ViewProps } from "react-native/types";
 
 import { type OptimalAdProps } from "@getoptimal/react-helpers";

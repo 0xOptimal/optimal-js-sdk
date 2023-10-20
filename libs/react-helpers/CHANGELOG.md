@@ -1,5 +1,13 @@
 # @getoptimal/react-helpers
 
+## 0.3.12
+
+### Patch Changes
+
+- internal maintenance
+- Updated dependencies
+  - @getoptimal/js-sdk@0.3.12
+
 ## 0.3.11
 
 ### Patch Changes

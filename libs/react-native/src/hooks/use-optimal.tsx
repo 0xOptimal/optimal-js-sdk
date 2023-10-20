@@ -1,4 +1,4 @@
-import { createContext, useContext, type ReactNode } from "react";
+import React, { createContext, useContext, type ReactNode } from "react";
 import { Platform, type AppStateStatus } from "react-native";
 import {
   QueryClient,

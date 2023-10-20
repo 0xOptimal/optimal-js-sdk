@@ -1,3 +1,4 @@
+import React from "react";
 import { Image, type ImageProps } from "react-native";
 
 import { type Decision } from "@getoptimal/js-sdk";

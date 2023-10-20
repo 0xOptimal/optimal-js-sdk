@@ -1,5 +1,11 @@
 # @getoptimal/eslint-config
 
+## 0.3.12
+
+### Patch Changes
+
+- internal maintenance
+
 ## 0.3.11
 
 ### Patch Changes
